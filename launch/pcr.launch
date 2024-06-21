@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name = "project" default="pcr" />
+
+	<rosparam command="load" file="$(find pcr)/config/config.yaml" />
+
+    <node pkg="pcr" type="pcr" name="pcr" output="screen" />
+
+</launch>

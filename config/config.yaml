@@ -1,0 +1,26 @@
+pcd_path: /home/evanovic/data/results/faster-lio/submap/
+
+transform: [0.785972, -0.68372,  0.0031,  30.17823,
+            0.618262,  0.566772, 0.022, -50.15619,
+            0.043,      0.071,   1.03,  10.0328174,
+            0,         0,        0,  1]
+
+voxel_size: 0.1 # Downsample
+
+fpfh_mode: 1 # 1 for non_ground pointcloud, 2 for with_ground pointcloud
+
+FPFH:
+  normal_radius: 0.03 # Normal radius should be lower than fpfh radius
+  fpfh_radius: 0.05
+  fpfh_match_threshold: 50
+
+registration_mode: 3 # 1 for Quatro, 2 for Teaser++
+
+quatro:
+    estimating_scale: false
+    noise_bound: 0.3
+    noise_bound_coeff: 1.0    
+    rotation:
+        num_max_iter: 50
+        gnc_factor: 1.4
+        rot_cost_diff_thr: 0.0001
